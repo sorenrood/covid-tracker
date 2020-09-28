@@ -41,7 +41,7 @@ number_of_cases = len(cases)
 for x in range(0, number_of_cases):
     print('{}: {}'.format(dates[x], cases[x]))
 
-# Last Update
+# Date output
 spu_last_updated = str(tree.xpath('//*[@id="pageBody"]/div/p[6]/em/text()'))
 date_spu_last_updated = spu_last_updated.strip("['Last updated: ']",)
 
