@@ -15,11 +15,15 @@ tree = html.fromstring(page.content)
 cases = []
 dates = []
 
-# Loop to fetch data
-for i in range(1, 10):
-    object = tree.xpath('//*[@id="pageBody"]/div/p[{}]/text()'.format(i))
-    cases.append(object)
+# # Loop to fetch data
+# for i in range(1, 10):
+#     # object = tree.xpath('//*[@id="pageBody"]/div/p[{}]/text()'.format(i))
+#     object = tree.xpath('//*[@id="pageBody"]/div/p[{}]/text()'.format(i))
+#     cases.append(object)
 
-# Output
-for case in cases:
-    print(case)
+# # Output
+# for case in cases:
+#     print(case)
+
+for p in tree.xpath('//*[@id="pageBody"]/div/p/text()'):
+    print(p)
